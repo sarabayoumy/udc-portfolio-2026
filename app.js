@@ -77,68 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, 2600);
 
-    // ==========================================
-    // 3. Hierarchy Tabs Navigation
-    // ==========================================
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabPanes = document.querySelectorAll('.tab-pane');
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active classes
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabPanes.forEach(p => p.classList.remove('active'));
-
-            // Add active class to selected tab button
-            btn.classList.add('active');
-            
-            // Show corresponding pane
-            const targetPaneId = btn.getAttribute('data-tab');
-            const targetPane = document.getElementById(targetPaneId);
-            if (targetPane) {
-                targetPane.classList.add('active');
-            }
-        });
-    });
-
-    // ==========================================
-    // 5. Real-Time Publications Search
-    // ==========================================
-    const searchInput = document.getElementById('pub-search');
-    const paperItems = document.querySelectorAll('.paper-item');
-    const thesisCards = document.querySelectorAll('.thesis-card');
-
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-
-            // Filter Papers list
-            paperItems.forEach(item => {
-                const title = item.querySelector('h5').textContent.toLowerCase();
-                const authors = item.querySelector('.paper-authors').textContent.toLowerCase();
-                const journal = item.querySelector('.paper-journal').textContent.toLowerCase();
-
-                if (title.includes(query) || authors.includes(query) || journal.includes(query)) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Filter Theses grid
-            thesisCards.forEach(card => {
-                const title = card.querySelector('h5').textContent.toLowerCase();
-                const author = card.querySelector('.thesis-author').textContent.toLowerCase();
-                const summary = card.querySelector('.thesis-summary').textContent.toLowerCase();
-
-                if (title.includes(query) || author.includes(query) || summary.includes(query)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    }
 
     // ==========================================
     // 6. Contact Form Handling
@@ -322,4 +261,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // ==========================================
+    // 9. Competition Excellence Clouds Toggling
+    // ==========================================
+    const cloudBtns = document.querySelectorAll('.cloud-btn');
+    const compPanes = document.querySelectorAll('.comp-pane');
+
+    cloudBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active classes from buttons
+            cloudBtns.forEach(b => b.classList.remove('active'));
+            // Add active to current button
+            btn.classList.add('active');
+
+            const compId = btn.getAttribute('data-comp');
+            
+            // Hide all panes
+            compPanes.forEach(pane => {
+                pane.classList.remove('active');
+            });
+
+            // Show selected pane
+            const targetPane = document.getElementById(`pane-${compId}`);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
+        });
+    });
 });
+

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=2.9">
 </head>
 <body class="light-theme">
     <!-- Intro Splash Loader -->
@@ -46,10 +46,11 @@
             
             <nav class="navbar" id="navbar">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#hierarchy" class="nav-link">Structure</a>
+                <a href="#hierarchy" class="nav-link">Sub-Teams</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#timeline" class="nav-link">Timeline</a>
+                <a href="#competitions" class="nav-link">Competitions</a>
+                <a href="#publications" class="nav-link">Research</a>
+                <a href="#timeline" class="nav-link">History</a>
                 <a href="#dbf" class="nav-link">Internal DBF</a>
                 <a href="#contact" class="nav-link btn-contact">Get In Touch</a>
             </nav>
@@ -57,6 +58,7 @@
             <div class="header-affiliations">
                 <img src="assets/cairo_univ_logo.png" alt="Cairo University" class="affiliation-logo" title="Cairo University">
                 <img src="assets/cairo_eng_logo_color.png" alt="Faculty of Engineering" class="affiliation-logo" title="Faculty of Engineering, Cairo University">
+                <img src="assets/aerospace_logo.png?v=1.1" alt="Aerospace Engineering" class="affiliation-logo" title="Aerospace Engineering Department">
             </div>
 
             <button class="mobile-nav-toggle" aria-label="Toggle navigation">
@@ -80,6 +82,11 @@
                     <div class="affiliation-divider"></div>
                     <div class="affiliation-item">
                         <img src="assets/cairo_eng_logo_color.png" alt="Faculty of Engineering Logo">
+                        <span>Faculty of Engineering</span>
+                    </div>
+                    <div class="affiliation-divider"></div>
+                    <div class="affiliation-item">
+                        <img src="assets/aerospace_logo.png?v=1.1" alt="Aerospace Engineering Logo">
                         <span>Aerospace Department</span>
                     </div>
                 </div>
@@ -103,6 +110,7 @@
             <div class="hero-visual">
                 <!-- Branded Sleek HUD Photo Card -->
                 <div class="hero-photo-wrapper">
+                    <div class="hero-photo-corners"></div>
                     <div class="hero-photo-inner">
                         <img src="assets/udc_team_group.jpg?v=1.2" alt="UDC Team Group Photo" class="hero-group-photo">
                         <div class="photo-hud-tag hud-caption-tag">UDC TEAM AT THE 2026 ANNUAL AIRSHOW</div>
@@ -149,7 +157,7 @@
     <section class="about-section" id="about">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-subtitle">Discovery</span>
+                <span class="section-subtitle">Brief</span>
                 <h2 class="section-title">ABOUT UDC</h2>
                 <div class="title-underline"></div>
             </div>
@@ -276,110 +284,42 @@
         </div>
     </section>
 
-    <!-- Organizational Structure / Hierarchy -->
+    <!-- UDC Sub-Teams Section -->
     <section class="hierarchy-section" id="hierarchy">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">UDC HIERARCHY</h2>
+                <h2 class="section-title">UDC SUB-TEAMS</h2>
                 <div class="title-underline"></div>
             </div>
             
             <p class="hierarchy-intro">
-                UDC features a streamlined organizational structure designed to realize our vision through coordination, collaboration, and collective leadership. Use the selector below to inspect team functions and coordinate structure.
+                UDC consists of five specialized sub-teams collaborating to design, build, test, and fly our advanced unmanned aerial systems.
             </p>
 
-            <div class="hierarchy-container">
-                <!-- Navigation Tabs for Hierarchy -->
-                <div class="hierarchy-tabs">
-                    <button class="tab-btn active" data-tab="lab-board">Lab Board</button>
-                    <button class="tab-btn" data-tab="sub-teams">Sub-Teams</button>
-                    <button class="tab-btn" data-tab="role-roles">Member Structure</button>
+            <div class="teams-grid" style="margin-top: 30px;">
+                <div class="team-info-card">
+                    <h5>Vehicle Design</h5>
+                    <p>Responsible for overall aerodynamic configuration, sizing, performance estimation, and conceptual aircraft layout.</p>
                 </div>
-
-                <!-- Tab Contents -->
-                <div class="tab-panes">
-                    <!-- Pane 1: Lab Board -->
-                    <div class="tab-pane active" id="lab-board">
-                        <div class="org-chart-wrapper">
-                            <div class="chart-node supervisor">
-                                <div class="node-title">Lab Supervisors</div>
-                                <div class="node-desc">Academic guidance and department integration</div>
-                            </div>
-                            <div class="chart-connector"></div>
-                            <div class="chart-node administrator">
-                                <div class="node-title">Lab Administrators</div>
-                                <div class="node-desc">Facility management and strategic operations</div>
-                            </div>
-                            <div class="chart-connector-fork"></div>
-                            <div class="chart-row">
-                                <div class="chart-node mentor">
-                                    <div class="node-title">Management Mentors</div>
-                                    <div class="node-desc">Administrative & organizational support</div>
-                                </div>
-                                <div class="chart-node mentor">
-                                    <div class="node-title">Teams Mentors</div>
-                                    <div class="node-desc">Technical oversight & expert engineering guidance</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pane 2: Sub-Teams -->
-                    <div class="tab-pane" id="sub-teams">
-                        <div class="teams-grid">
-                            <div class="team-info-card">
-                                <h5>Vehicle Design</h5>
-                                <p>Responsible for overall aerodynamic configuration, sizing, performance estimation, and conceptual aircraft layout.</p>
-                            </div>
-                            <div class="team-info-card">
-                                <h5>Mechanical Design</h5>
-                                <p>Focuses on CAD modeling, detailed structural components, stress analyses, internal layout configurations, and fabrication.</p>
-                            </div>
-                            <div class="team-info-card">
-                                <h5>GN&C (Guidance, Nav & Control)</h5>
-                                <p>Configures flight controllers, writes autopilot code, designs custom control systems, and manages sensor integration.</p>
-                            </div>
-                            <div class="team-info-card">
-                                <h5>Piloting & Flight Operations</h5>
-                                <p>Conducts simulation testing, manual flights of prototypes, flight checklist verification, and telemetry analysis.</p>
-                            </div>
-                            <div class="team-info-card focus-card">
-                                <h5>Media, PR & Fundraising</h5>
-                                <p>Drives brand communication, coordinates sponsorships, manages public events, social platforms, and document layouts.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pane 3: Roles -->
-                    <div class="tab-pane" id="role-roles">
-                        <div class="roles-flow">
-                            <div class="role-step">
-                                <div class="role-step-number">01</div>
-                                <div class="role-step-info">
-                                    <h6>Principal & Vice Coordinators</h6>
-                                    <p>Central management leading UDC operations, organizing schedules, and acting as standard representation.</p>
-                                </div>
-                            </div>
-                            <div class="role-step-line"></div>
-                            <div class="role-step">
-                                <div class="role-step-number">02</div>
-                                <div class="role-step-info">
-                                    <h6>Sub-Team Coordinators & Vices</h6>
-                                    <p>Technical leaders directing specific domain tasks (e.g. Mechanical, GN&C) and managing project execution details.</p>
-                                </div>
-                            </div>
-                            <div class="role-step-line"></div>
-                            <div class="role-step">
-                                <div class="role-step-number">03</div>
-                                <div class="role-step-info">
-                                    <h6>Undergraduate Members</h6>
-                                    <p>The backbone of UDC, actively carrying out design, manufacturing, testing, and operational tasks.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="team-info-card">
+                    <h5>Mechanical Design</h5>
+                    <p>Focuses on CAD modeling, detailed structural components, stress analyses, internal layout configurations, and fabrication.</p>
+                </div>
+                <div class="team-info-card">
+                    <h5>GN&C</h5>
+                    <p>Configures flight controllers, writes autopilot code, designs custom control systems, and manages sensor integration.</p>
+                </div>
+                <div class="team-info-card">
+                    <h5>Piloting</h5>
+                    <p>Conducts simulation testing, manual flights of prototypes, flight checklist verification, and telemetry analysis.</p>
+                </div>
+                <div class="team-info-card focus-card">
+                    <h5>Media, PR & FR</h5>
+                    <p>Drives brand communication, coordinates sponsorships, manages public events, social platforms, and document layouts.</p>
                 </div>
             </div>
+        </div>
+    </section>
         </div>
     </section>
 
@@ -434,13 +374,30 @@
 
                 <!-- Project 2 -->
                 <div class="project-card" data-category="logistics">
-                    <div class="project-visual">
-                        <svg class="project-wire-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="25" y="25" width="50" height="50" rx="5" fill="none" stroke="#4677a7" stroke-width="2"/>
-                            <path d="M 10,25 L 25,25 M 75,25 L 90,25" stroke="#000000" stroke-width="2"/>
-                            <path d="M 50,15 L 50,25" stroke="#4677a7" stroke-width="2"/>
-                        </svg>
-                        <div class="project-year">2025</div>
+                    <div class="project-visual" style="height: auto; display: block; border-bottom: 1px solid var(--border-light); padding: 0;">
+                        <!-- Instagram-style horizontal image scroller -->
+                        <div class="facility-gallery-scroller" style="margin-top: 0;">
+                            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
+                            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
+                            
+                            <div class="gallery-track">
+                                <div class="gallery-item">
+                                    <img src="assets/zajel_1.jpg" alt="UAV Medical Supplies Delivery System (Zajel) drone on launcher stand">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/zajel_2.jpg" alt="Zajel development team posing with their prototype">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="assets/zajel_3.jpg" alt="Zajel UAV vertical tail fin design with structural reinforcement">
+                                </div>
+                            </div>
+                            <div class="scroller-indicator" style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); z-index: 10; margin-top: 0; background: rgba(9, 13, 22, 0.45); padding: 3px 8px; border-radius: 10px; backdrop-filter: blur(2px);">
+                                <span class="indicator-dot active"></span>
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-dot"></span>
+                            </div>
+                        </div>
+                        <div class="project-year" style="z-index: 11;">2025</div>
                     </div>
                     <div class="project-details">
                         <h4>UAV Medical Supplies Delivery System</h4>
@@ -532,120 +489,6 @@
                         </ul>
                     </div>
                 </div>
-
-
-
-                <!-- Project 6 -->
-                <div class="project-card" data-category="vtol">
-                    <div class="project-visual" style="height: auto; display: block; border-bottom: 1px solid var(--border-light); padding: 0;">
-                        <!-- Instagram-style horizontal image scroller -->
-                        <div class="facility-gallery-scroller" style="margin-top: 0;">
-                            <button class="gallery-nav-btn prev-btn" aria-label="Previous image">‹</button>
-                            <button class="gallery-nav-btn next-btn" aria-label="Next image">›</button>
-                            
-                            <div class="gallery-track">
-                                <div class="gallery-item">
-                                    <img src="assets/hexa_1.jpg" alt="Cairo University Hexacopter UAS in Flight">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="assets/hexa_2.jpg" alt="UDC Members Field Launch and Telemetry Control of Hexacopter">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="assets/hexa_3.jpg" alt="Close-up of Hexacopter UAS Platform Hovering">
-                                </div>
-                            </div>
-                            <div class="scroller-indicator" style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); z-index: 10; margin-top: 0; background: rgba(9, 13, 22, 0.45); padding: 3px 8px; border-radius: 10px; backdrop-filter: blur(2px);">
-                                <span class="indicator-dot active"></span>
-                                <span class="indicator-dot"></span>
-                                <span class="indicator-dot"></span>
-                            </div>
-                        </div>
-                        <div class="project-year" style="z-index: 11;">2022</div>
-                    </div>
-                    <div class="project-details">
-                        <h4>Design & Implementation of Hexacopter</h4>
-                        <p class="project-desc">Custom flight-tested multirotor aircraft developed from first-principles structures to automated controls.</p>
-                        <ul class="project-specs">
-                            <li><strong>Capability:</strong> Fully autonomous path execution</li>
-                            <li><strong>Payload:</strong> Up to 3.0 kg structural payload capability</li>
-                            <li><strong>Focus:</strong> Structural carbon fabrication and integration</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Additional Projects Table -->
-            <div class="additional-projects-wrapper">
-                <h3 class="subsection-title">Additional Legacy Projects</h3>
-                <div class="table-container">
-                    <table class="legacy-projects-table">
-                        <thead>
-                            <tr>
-                                <th>Graduation Project Title</th>
-                                <th>Focus Classification</th>
-                                <th>Year</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bicopter Tilted Rotor</td>
-                                <td>Tilt-Rotor VTOL Controls</td>
-                                <td>2025</td>
-                            </tr>
-                            <tr>
-                                <td>Medical Supplies UAV – Zajel</td>
-                                <td>Long-range Cargo Distribution</td>
-                                <td>2024</td>
-                            </tr>
-                            <tr>
-                                <td>Distributed Propulsion VTOL – Phase II</td>
-                                <td>Distributed Lift Aerodynamics</td>
-                                <td>2024</td>
-                            </tr>
-                            <tr>
-                                <td>Airborne Aided Traffic Control</td>
-                                <td>Traffic Flow Simulation & CV</td>
-                                <td>2022</td>
-                            </tr>
-                            <tr>
-                                <td>HAPS Solar Glider Design</td>
-                                <td>High-Altitude Pseudo-Satellite (20km altitude)</td>
-                                <td>2021</td>
-                            </tr>
-                            <tr>
-                                <td>Autonomous Air Transportation (Vision Nav)</td>
-                                <td>Computer Vision Navigation</td>
-                                <td>2019</td>
-                            </tr>
-                            <tr>
-                                <td>Drone Design for Precision Agriculture</td>
-                                <td>Multispectral Remote Sensing</td>
-                                <td>2018</td>
-                            </tr>
-                            <tr>
-                                <td>Mantis 18-J Mini UAV</td>
-                                <td>Modular Surveillance Wing</td>
-                                <td>2012</td>
-                            </tr>
-                            <tr>
-                                <td>AlQahira-400 Fixed Wing</td>
-                                <td>Early RC Platform Research</td>
-                                <td>2012</td>
-                            </tr>
-                            <tr>
-                                <td>African Hawk I & II</td>
-                                <td>First Composite Flying Wings</td>
-                                <td>2010-2011</td>
-                            </tr>
-                            <tr>
-                                <td>Quad-Rotor Flying Robot (Pre-UDC)</td>
-                                <td>Legacy Quad-Rotor Sizing</td>
-                                <td>2006</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
     </section>
@@ -659,16 +502,7 @@
                 <div class="title-underline"></div>
             </div>
 
-            <!-- Search Controls -->
-            <div class="search-box-wrapper">
-                <input type="text" id="pub-search" placeholder="Search publication title, authors, or thesis keywords...">
-                <div class="search-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </div>
-            </div>
+
 
             <!-- High Impact Theses -->
             <h3 class="subsection-title">Selected PhD & Master Theses</h3>
@@ -710,74 +544,7 @@
                 </div>
             </div>
 
-            <!-- Peer Reviewed Publications -->
-            <h3 class="subsection-title">Peer-Reviewed Papers</h3>
-            <div class="publications-list" id="papers-list">
-                <!-- Paper 1 -->
-                <div class="paper-item">
-                    <div class="paper-meta">
-                        <span class="paper-num">01</span>
-                        <span class="paper-journal">Ocean Engineering • Aug 2024</span>
-                    </div>
-                    <div class="paper-body">
-                        <h5>Magnitude Sensitivity Analysis for Parameter Identification Applied to an Autonomous Underwater Vehicle</h5>
-                        <p class="paper-authors">Mohamed Elmezain, Gamal El-Bayoumi, Basman Elhadidi, Osama Mohamady</p>
-                    </div>
-                    <a href="https://doi.org/10.1016/j.oceaneng.2024.118918" target="_blank" class="paper-link">DOI Link</a>
-                </div>
 
-                <!-- Paper 2 -->
-                <div class="paper-item">
-                    <div class="paper-meta">
-                        <span class="paper-num">02</span>
-                        <span class="paper-journal">AIAA SCITECH 2024 • Jan 2024</span>
-                    </div>
-                    <div class="paper-body">
-                        <h5>Experimental Investigation into the Performance of UAV Propellers at Low Reynolds Numbers</h5>
-                        <p class="paper-authors">Mohamed H. Eldegwy, Mohamed A. Hetta, Mostafa R. A. Nabawy, Osama Mohamady</p>
-                    </div>
-                    <a href="https://doi.org/10.2514/6.2024-2674" target="_blank" class="paper-link">AIAA Portal</a>
-                </div>
-
-                <!-- Paper 3 -->
-                <div class="paper-item">
-                    <div class="paper-meta">
-                        <span class="paper-num">03</span>
-                        <span class="paper-journal">Arabian Journal for Science and Engineering • Oct 2023</span>
-                    </div>
-                    <div class="paper-body">
-                        <h5>Promoting the Maneuverability and Fault-Tolerant Control Capabilities of Dual-System/Hybrid VTOL UAVs</h5>
-                        <p class="paper-authors">Wessam Ahmed Salem, Osama Mohamady, Mohannad Draz, Gamal El-bayoumi</p>
-                    </div>
-                    <a href="https://doi.org/10.1007/s13369-023-08255-0" target="_blank" class="paper-link">Springer Link</a>
-                </div>
-
-                <!-- Paper 4 -->
-                <div class="paper-item">
-                    <div class="paper-meta">
-                        <span class="paper-num">04</span>
-                        <span class="paper-journal">Autonomous Robots • Feb 2023</span>
-                    </div>
-                    <div class="paper-body">
-                        <h5>Adaptive Optimal Controller Design for an Unbalanced UAV with Slung Load</h5>
-                        <p class="paper-authors">Mohamed Tolba, Bijan Shirinzadeh, Gamal El-Bayoumi & Osama Mohamady</p>
-                    </div>
-                    <a href="https://doi.org/10.1007/s10514-023-10090-z" target="_blank" class="paper-link">Research Gate</a>
-                </div>
-
-                <!-- Paper 5 -->
-                <div class="paper-item">
-                    <div class="paper-meta">
-                        <span class="paper-num">05</span>
-                        <span class="paper-journal">Journal of Intelligent & Robotic Systems • Mar 2021</span>
-                    </div>
-                    <div class="paper-body">
-                        <h5>Nonlinear Flight Dynamics and Control of a Fixed-Wing Micro Air Vehicle: Numerical & System Identification</h5>
-                        <p class="paper-authors">A. Aboelezz, O. Mohamady, M. Hassanalian & B. Elhadidi</p>
-                    </div>
-                    <a href="https://doi.org/10.1007/s10846-021-01352-y" target="_blank" class="paper-link">Springer Link</a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -786,7 +553,7 @@
         <div class="section-container">
             <div class="section-header">
                 <span class="section-subtitle">Our Heritage</span>
-                <h2 class="section-title">UDC THROUGH THE YEARS</h2>
+                <h2 class="section-title">UDC HISTORY</h2>
                 <div class="title-underline"></div>
             </div>
             
@@ -1026,6 +793,251 @@
         </div>
     </section>
 
+    <!-- Competition Excellence Section -->
+    <section class="competitions-section" id="competitions">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Global & National Stage</span>
+                <h2 class="section-title">COMPETITION EXCELLENCE</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <p class="competitions-intro">
+                UDC has a proud legacy of representing Cairo University in national and international aerospace challenges. Click on any of the competition cards below to view our missions and achievements.
+            </p>
+
+            <!-- Clouds / Category Selectors -->
+            <div class="competitions-clouds">
+                <button class="cloud-btn btn-blue active" data-comp="aiaa-dbf">AIAA Design/Build/Fly</button>
+                <button class="cloud-btn btn-teal" data-comp="icmtc">ICMTC Military UAV</button>
+                <button class="cloud-btn btn-indigo" data-comp="gpex">CU GPEx Award</button>
+                <button class="cloud-btn btn-purple" data-comp="ebdaa">Ebdaa Festival</button>
+                <button class="cloud-btn btn-orange" data-comp="eed">Egyptian Eng Day</button>
+                <button class="cloud-btn btn-pink" data-comp="ylf">Youth Leaders Foundation</button>
+                <button class="cloud-btn btn-green" data-comp="innovates">Cairo Innovates</button>
+            </div>
+
+            <!-- Content Card Display -->
+            <div class="comp-display-card">
+                <!-- Content is dynamically swapped by JS, default is AIAA DBF -->
+                <div class="comp-pane active" id="pane-aiaa-dbf">
+                    <div class="comp-pane-header">
+                        <h4>AIAA Design/Build/Fly Competition</h4>
+                        <span class="comp-pane-date">2015 - Present</span>
+                    </div>
+                    <p class="comp-pane-desc">
+                        The world's largest student aircraft design competition — approximately 140 international teams per year. UDC competes through three stages: initial design, detailed design, and the live air show in the United States. UDC has fielded entries continuously since 2015, representing Cairo University on the global stage.
+                    </p>
+                    <h5 class="comp-table-title">Accomplishments:</h5>
+                    <div class="comp-table-wrapper">
+                        <table class="comp-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Mission</th>
+                                    <th>Location</th>
+                                    <th>Achievement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023</td>
+                                    <td>Demonstration of Urban Air Mobility (UAM)</td>
+                                    <td>Wichita, KS</td>
+                                    <td><span class="badge badge-accent">27th of 149 — Initial Design Stage</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>Humanitarian Mission</td>
+                                    <td>Wichita, KS</td>
+                                    <td><span class="badge badge-primary">1st Proposal</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td>
+                                    <td>Aircraft Carrier Operations</td>
+                                    <td>Tucson, AZ</td>
+                                    <td><span class="badge badge-primary">1st Proposal</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Competition Gallery Grid -->
+                    <div class="comp-gallery-grid" style="grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <div class="comp-gallery-item" style="height: 380px;">
+                            <img src="assets/dbf_team_flag.jpg?v=1.0" alt="UDC Team posing at AIAA DBF Airfield">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comp-pane" id="pane-icmtc">
+                    <div class="comp-pane-header">
+                        <h4>ICMTC Military UAV Competition</h4>
+                        <span class="comp-pane-date">2023 - 2024</span>
+                    </div>
+                    <p class="comp-pane-desc">
+                        Organized by the Military Technical College in Egypt (Lt. General Ibrahim Selim Award). This competition provides an opportunity for engineering students from multi-disciplinary branches to design, test, and produce unmanned systems capable of performing several missions autonomously or remotely within a specified range.
+                    </p>
+                    <h5 class="comp-table-title">Accomplishments:</h5>
+                    <div class="comp-table-wrapper">
+                        <table class="comp-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Mission</th>
+                                    <th>Location</th>
+                                    <th>Achievement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023-2024</td>
+                                    <td>Autonomous UAV Capable of Navigation and Localization</td>
+                                    <td>Egypt</td>
+                                    <td><span class="badge badge-success">Best Design Award</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Competition Gallery Grid -->
+                    <div class="comp-gallery-grid" style="grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <div class="comp-gallery-item" style="height: 380px;">
+                            <img src="assets/icmtc_award.png?v=1.1" alt="UDC Best Design Award at ICMTC 2024">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comp-pane" id="pane-gpex">
+                    <div class="comp-pane-header">
+                        <h4>Cairo University Graduation Project Award of Excellence (GPEx)</h4>
+                        <span class="comp-pane-date">2024 - 2025</span>
+                    </div>
+                    <p class="comp-pane-desc">
+                        GPEx is an annual university-wide competition hosted by Cairo University's Faculty of Engineering, dedicated to recognizing and celebrating the most innovative graduation projects across mechanical engineering programs. The competition evaluates projects against three core pillars: Engineering concept, creativity, and sustainability.
+                    </p>
+                    <h5 class="comp-table-title">Accomplishments:</h5>
+                    <div class="comp-table-wrapper">
+                        <table class="comp-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Team</th>
+                                    <th>Project</th>
+                                    <th>Award</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025</td>
+                                    <td>Hayah</td>
+                                    <td>Design, Implementation and Operations Management of a UAV Medical Supplies Delivery System</td>
+                                    <td><span class="badge badge-accent">2nd Place</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>Zajal</td>
+                                    <td>Medical Supplies UAV</td>
+                                    <td><span class="badge badge-success">1st Place</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Competition Gallery Grid -->
+                    <div class="comp-gallery-grid" style="grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <div class="comp-gallery-item" style="height: 380px;">
+                            <img src="assets/gpex_award.jpg?v=1.0" alt="UDC Team Zajal posing with 1st Place Award at GPEx 2024">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comp-pane" id="pane-ebdaa">
+                    <div class="comp-pane-header">
+                        <h4>Ebdaa (Creativity) Festival for University Youth</h4>
+                        <span class="comp-pane-date">Annual</span>
+                    </div>
+                    <p class="comp-pane-desc">
+                        Annual national competition organized by Egypt's Ministry of Youth and Sports. UDC participates with aerospace innovation projects. The competition acts as a platform for discovering and nurturing artistic, cultural, and scientific talent among young people in universities, academies, and higher institutes.
+                    </p>
+                    <div class="comp-simple-achieve">
+                        <div class="simple-achieve-item">
+                            <div class="achieve-text">Active participation showcasing innovative aircraft designs to the Ministry of Youth and Sports.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comp-pane" id="pane-eed">
+                    <div class="comp-pane-header">
+                        <h4>EED – Egyptian Engineering Day</h4>
+                        <span class="comp-pane-date">2019</span>
+                    </div>
+                    <p class="comp-pane-desc">
+                        Honored for participation in AIAA's challenge to design, build, and test an aircraft for delivering medical aid to remote areas.
+                    </p>
+                    <div class="comp-simple-achieve">
+                        <div class="simple-achieve-item">
+                            <div class="achieve-text">Honored for pioneering student-designed aircraft for medical cargo distribution.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comp-pane" id="pane-ylf">
+                    <div class="comp-pane-header">
+                        <h4>Youth Leaders Foundation (YLF) Competition</h4>
+                        <span class="comp-pane-date">Recent</span>
+                    </div>
+                    <p class="comp-pane-desc">
+                        This competition offers engineering students from multi-disciplinary branches the opportunity to design, test, and present innovative projects aligned with Egypt's Vision 2030. It encourages teamwork, leadership, and real-world problem-solving across multiple fields.
+                    </p>
+                    <div class="comp-simple-achieve">
+                        <div class="simple-achieve-item">
+                            <div class="achieve-text">Presented student projects aligned with sustainable development goals and Egypt's Vision 2030.</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Competition Gallery Grid -->
+                    <div class="comp-gallery-grid" style="grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <div class="comp-gallery-item" style="height: 380px;">
+                            <img src="assets/ylf_team.jpg?v=1.0" alt="UDC Team posing at YLF Competition Exhibition Booth">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comp-pane" id="pane-innovates">
+                    <div class="comp-pane-header">
+                        <h4>Cairo Innovates Exhibition</h4>
+                        <span class="comp-pane-date">2017</span>
+                    </div>
+                    <p class="comp-pane-desc">
+                        Secured 1st place in the graduation projects category with a project to design, build, and test an agricultural surveying aircraft using optical and thermal sensors.
+                    </p>
+                    <h5 class="comp-table-title">Accomplishments:</h5>
+                    <div class="comp-table-wrapper">
+                        <table class="comp-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Category</th>
+                                    <th>Project Focus</th>
+                                    <th>Award</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2017</td>
+                                    <td>Graduation Projects</td>
+                                    <td>Precision Agriculture Drone using Optical and Thermal Sensors</td>
+                                    <td><span class="badge badge-success">1st Place</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- UDC DBF Internal Competition -->
     <section class="dbf-section" id="dbf">
         <div class="section-container">
@@ -1251,6 +1263,6 @@
     </footer>
 
     <!-- JavaScript File -->
-    <script src="app.js?v=1.1"></script>
+    <script src="app.js?v=2.2"></script>
 </body>
 </html>
